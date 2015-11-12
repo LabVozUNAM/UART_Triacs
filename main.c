@@ -48,37 +48,37 @@ __interrupt void USCI0RX_ISR(void)
    P1OUT |= RXLED;
     if (UCA0RXBUF == '1') // 'a' received?
     	{
-       i = 0;
-       UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
-       UCA0TXBUF = string[i++];
-       P2OUT ^= BIT0;
+		   i = 0;
+		   UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
+		   //UCA0TXBUF = string[i++];
+		   P2OUT ^= BIT0;
     	}
     if (UCA0RXBUF == '2') // 'a' received?
         {
            i = 0;
            UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
-           UCA0TXBUF = string[i++];
+           //UCA0TXBUF = string[i++];
            P2OUT ^= BIT1;
         }
     if (UCA0RXBUF == '3') // 'a' received?
         {
            i = 0;
            UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
-           UCA0TXBUF = string[i++];
+           //UCA0TXBUF = string[i++];
            P2OUT ^= BIT2;
         }
     if (UCA0RXBUF == '4') // 'a' received?
         {
            i = 0;
            UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
-           UCA0TXBUF = string[i++];
+           //UCA0TXBUF = string[i++];
            P2OUT ^= BIT3;
         }
     if (UCA0RXBUF == '5') // 'a' received?
         {
            i = 0;
            UC0IE |= UCA0TXIE; // Enable USCI_A0 TX interrupt
-           UCA0TXBUF = string[i++];
+           //UCA0TXBUF = string[i++];
            P2OUT ^= BIT4;
         }
     P1OUT &= ~RXLED;
