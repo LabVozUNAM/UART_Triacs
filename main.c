@@ -28,7 +28,8 @@ int main(void)
    UCA0MCTL = UCBRS0; // Modulation UCBRSx = 1
    UCA0CTL1 &= ~UCSWRST; // **Initialize USCI state machine**
    UC0IE |= UCA0RXIE; // Enable USCI_A0 RX interrupt
-   __bis_SR_register(CPUOFF + GIE); // Enter LPM0 w/ int until Byte RXed
+   //
+   __bis_SR_register(GIE); // Enter LPM0 w/ int until Byte RXed
    while (1)
    { }
 }
